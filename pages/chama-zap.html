@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<!-- Original sidebar made by https://codepen.io/piyushpd/pen/eYWWeNL -->
+
+<html lang="PT-BR">
+
+    <head>
+        <!-- Page info -->
+		<meta charset="UTF-8">
+		<title>GSistema | Chama zap</title>
+        <link rel="shotcurt icon" href="https://i.imgur.com/tS3vfqM.png">
+		<meta name="application-name" content="GSistema">
+        <meta name="author" content="Edinho">
+		<!-- Page icons -->
+		<script src="https://kit.fontawesome.com/e129a1b913.js" crossorigin="anonymous"></script>
+        <!-- Page fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+		<!-- Page styles -->
+        <link rel="stylesheet" href="../styles/styles.css">
+		<!-- Page responsiveness -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Page scripts -->
+        <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
+    </head>
+
+<!--
+
+ _._     _,-'""`-._       
+(,-.`._,'(       |\`-/|   
+    `-.-' \ )-`( , o o)  [- |) | |\| |-| () 
+          `-    \`_`"'-   
+-->        
+
+    <body>  
+        
+        <div id="accordian">
+
+            <img src="https://i.imgur.com/GLvkWLS.png" alt="Logo GS Financiamentos">
+
+            <ul class="show-dropdown">
+                <li>
+                    <a href="../index.html"><i class="far fa-address-book"></i>Clientes</a>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0);"><i class="far fa-chart-bar"></i>Simuladores</a>
+                    <ul class="show-dropdown">
+                        <li><a href="./prestacao-fixa.html">Prestação fixa</a></li>
+                        <li>
+                            <a href="javascript:void(0);">INSS</a>
+                            <ul class="show-dropdown">
+                                <li><a href="./inss-novo.html">Novo</a></li>
+                                <li><a href="./inss-cartao.html">Cartão de crédito</a></li>
+                                <li><a href="./inss-reducao.html">Redução de parcela</a></li>
+                                <li><a href="./inss-aumento.html">Aumento salarial</a></li>
+                                <li><a href="./inss-aumento-margem.html">Aumento de margem</a></li>
+                                <li><a href="./inss-desbloqueio.html">Desbloqueio</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript:void(0);">Crédito pessoal</a>
+                            <ul>
+                                <li><a href="./pessoal-cartao.html">Cartão de crédito</a></li>
+                                <li><a href="./pessoal-energia.html">Energia elétrica</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="./links-uteis.html"><i class="far fa-bookmark"></i>Links úteis</a>
+                </li>
+
+                <li class="active">
+                    <a href="#"><i class="far fa-envelope"></i>Chama zap</a>
+                </li>
+
+            </ul>
+        </div>
+
+        <main>
+            <div class="container-prestacao-novo" style="height: 386px;">
+
+                <label>Chamar no WhatsApp</label>
+
+                <label>
+                    <input id='numeroZap' title="Digite o valor de parcela" tabindex="1" placeholder=" ">  
+                    <span>DDD + Número</span>
+                </label>
+
+                <label>
+                    <textarea id='mensagemZap' title="Digite o valor de parcela" tabindex="2" placeholder=" "></textarea>
+                    <span>Mensagem</span>
+                </label>
+
+                <button tabindex="3" type="button" onClick="chamaZap()" style="margin-right: 20px;">Chamar</button>
+                <button tabindex="4" type="button" onClick="limpaZap()">Limpar</button>                
+            </div>
+
+            <div class="container-prestacao-novo" style="height: 386px;">
+                <label>Mensagens prontas</label>
+                <button tabindex="5" type="button" onClick="dadosZap()" style="width: 300px;">Dados da loja</button>
+                <button tabindex="6" type="button" onClick="falamosZap()" style="width: 300px;">Falamos a pouco...</button>
+                <button tabindex="7" type="button" onClick="tambemTrabalhamos()" style="width: 300px;">Também trabalhamos...</button>
+                <button tabindex="8" type="button" onClick="" style="width: 300px;">...</button>
+                <button tabindex="9" type="button" onClick="" style="width: 300px;">...</button>
+                <button tabindex="10" type="button" onClick="" style="width: 300px;">...</button>
+            </div>
+        </main>
+
+        <!-- Page scripts -->	
+		<script type="text/javascript" src="../js/sidebar.js"></script>
+        <script type="text/javascript" src="../js/outros.js"></script>
+        
+    </body>
+
+</html>    
+    

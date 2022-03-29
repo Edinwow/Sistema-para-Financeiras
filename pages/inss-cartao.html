@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<!-- Original sidebar made by https://codepen.io/piyushpd/pen/eYWWeNL -->
+
+<html lang="PT-BR">
+
+    <head>
+        <!-- Page info -->
+		<meta charset="UTF-8">
+		<title>GSistema | Cartão consignado</title>
+        <link rel="shotcurt icon" href="https://i.imgur.com/tS3vfqM.png">
+		<meta name="application-name" content="GSistema">
+        <meta name="author" content="Edinho">
+		<!-- Page icons -->
+		<script src="https://kit.fontawesome.com/e129a1b913.js" crossorigin="anonymous"></script>
+        <!-- Page fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+		<!-- Page styles -->
+        <link rel="stylesheet" href="../styles/styles.css">
+		<!-- Page responsiveness -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Page scripts -->
+        <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
+    </head>
+
+<!--
+
+ _._     _,-'""`-._       
+(,-.`._,'(       |\`-/|   
+    `-.-' \ )-`( , o o)  [- |) | |\| |-| () 
+          `-    \`_`"'-   
+-->        
+
+    <body>  
+        
+        <div id="accordian">
+
+            <img src="https://i.imgur.com/GLvkWLS.png" alt="Logo GS Financiamentos">
+
+            <ul class="show-dropdown">
+                <li>
+                    <a href="../index.html"><i class="far fa-address-book"></i>Clientes</a>
+                </li>
+
+                <li class="active">
+                    <a href="javascript:void(0);"><i class="far fa-chart-bar"></i>Simuladores</a>
+                    <ul class="show-dropdown">
+                        <li><a href="./prestacao-fixa.html">Prestação fixa</a></li>
+                        <li class="active">
+                            <a href="javascript:void(0);">INSS</a>
+                            <ul class="show-dropdown">
+                                <li><a href="./inss-novo.html">Novo</a></li>
+                                <li class="active"><a href="#">Cartão de crédito</a></li>
+                                <li><a href="./inss-reducao.html">Redução de parcela</a></li>
+                                <li><a href="./inss-aumento.html">Aumento salarial</a></li>
+                                <li><a href="./inss-aumento-margem.html">Aumento de margem</a></li>
+                                <li><a href="./inss-desbloqueio.html">Desbloqueio</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript:void(0);">Crédito pessoal</a>
+                            <ul class="show-dropdown">
+                                <li><a href="./pessoal-cartao.html">Cartão</a></li>
+                                <li><a href="./pessoal-energia.html">Energia elétrica</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="./links-uteis.html"><i class="far fa-bookmark"></i>Links úteis</a>
+                </li>
+
+                <li>
+                    <a href="./chama-zap.html"><i class="far fa-envelope"></i>Chama zap</a>
+                </li>
+
+            </ul>
+        </div>
+
+        <main>
+            <div class="containerzao-cartao" style="height: 412px;">
+                <div class="container-cartao">
+
+                    <label style="margin-right: 200px;">Cartão de crédito consignado</label>
+
+                    <label>
+                        <input id='parcelaCartao' title="Digite o limite disponível" tabindex="1" placeholder=" ">  
+                        <span>Valor da parcela</span>
+                    </label>
+
+                    <label style="margin-left: 20px;">
+                        <input id='idadeCartao' title="Digite o valor líquido" tabindex="2" placeholder=" ">
+                        <span>Idade do cliente</span>
+                    </label>
+
+                    <button tabindex="3" type="button" onClick="calculaCartoes()">Calcular</button>
+                    <button tabindex="4" type="button" onClick="limpaCartoes()" style="margin-left: 20px;">Limpar</button>
+                    
+                    <table id='cardConsigTable'>
+                        <thead>
+                            <tr>
+                                <th>Banco</th>
+                                <th>Limite</th>
+                                <th>Saque</th>
+                                <th style="width: 140px;">Multiplicador</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="font-weight: bold; background: #222429; width: 125px;">BMG</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <th style="font-weight: normal;">-</th>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: bold; background: #222429;">Olé</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <th style="font-weight: normal;">-</th>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: bold; background: #222429;">Pan</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <th style="font-weight: normal;">-</th>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: bold; background: #222429;">Cetelem</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <th style="font-weight: normal;">-</th>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: bold; background: #222429;">Daycoval</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <th style="font-weight: normal;">-</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+
+        <!-- Page scripts -->	
+		<script type="text/javascript" src="../js/sidebar.js"></script>
+        <script type="text/javascript" src="../js/inss.js"></script>
+        
+    </body>
+
+</html>    
+    

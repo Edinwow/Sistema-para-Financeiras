@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<!-- Original sidebar made by https://codepen.io/piyushpd/pen/eYWWeNL -->
+<!-- Redução de parcela simulator JavaScript made by https://github.com/Edinwow/Simuladores-Emprestimo -->
+
+<html lang="PT-BR">
+
+    <head>
+        <!-- Page info -->
+		<meta charset="UTF-8">
+		<title>GSistema | Aumento de Margem</title>
+        <link rel="shotcurt icon" href="https://i.imgur.com/tS3vfqM.png">
+		<meta name="application-name" content="GSistema">
+        <meta name="author" content="Edinho">
+		<!-- Page icons -->
+		<script src="https://kit.fontawesome.com/e129a1b913.js" crossorigin="anonymous"></script>
+        <!-- Page fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+		<!-- Page styles -->
+        <link rel="stylesheet" href="../styles/styles.css">
+		<!-- Page responsiveness -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Page scripts -->
+        <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
+    </head>
+
+<!--
+
+ _._     _,-'""`-._       
+(,-.`._,'(       |\`-/|   
+    `-.-' \ )-`( , o o)  [- |) | |\| |-| () 
+          `-    \`_`"'-   
+-->        
+
+    <body>  
+        
+        <div id="accordian">
+
+            <img src="https://i.imgur.com/GLvkWLS.png" alt="Logo GS Financiamentos">
+
+            <ul class="show-dropdown">
+                <li>
+                    <a href="../index.html"><i class="far fa-address-book"></i>Clientes</a>
+                </li>
+
+                <li class="active">
+                    <a href="javascript:void(0);"><i class="far fa-chart-bar"></i>Simuladores</a>
+                    <ul class="show-dropdown">
+                        <li><a href="./prestacao-fixa.html">Prestação fixa</a></li>
+                        <li class="active">
+                            <a href="javascript:void(0);">INSS</a>
+                            <ul class="show-dropdown">
+                                <li><a href="./inss-novo.html">Novo</a></li>
+                                <li><a href="./inss-cartao.html">Cartão de crédito</a></li>
+                                <li><a href="./inss-reducao.html">Redução de parcela</a></li>
+                                <li><a href="./inss-aumento.html">Aumento salarial</a></li>
+                                <li class="active"><a href="#">Aumento de margem</a></li>
+                                <li><a href="./inss-desbloqueio.html">Desbloqueio</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript:void(0);">Crédito pessoal</a>
+                            <ul>
+                                <li><a href="./pessoal-cartao.html">Cartão de crédito</a></li>
+                                <li><a href="./pessoal-energia.html">Energia elétrica</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="./links-uteis.html"><i class="far fa-bookmark"></i>Links úteis</a>
+                </li>
+
+                <li>
+                    <a href="./chama-zap.html"><i class="far fa-envelope"></i>Chama zap</a>
+                </li>
+
+            </ul>
+        </div>
+
+        <main>
+            <div class="container-prestacao-novo" style="height: 274px; width: 313px;">
+
+                    <label for="name-filter">Aumento de margem</label>
+
+                    <label>
+                        <input id='salarioAumentoMargem' title="Digite o valor do salário antigo" tabindex="1" placeholder=" " style="width: 299px;">  
+                        <span>Salário</span>
+                    </label>
+
+                    <label>
+                        <input id='margemAtualAumentoMargem' title="Digite o valor do salário novo" tabindex="2" placeholder=" " style="width: 299px;">
+                        <span>Margem atual</span>
+                    </label>
+
+
+                    <button tabindex="4" type="button" onClick="calculaAumentoMargem()" style="width: 312px;">Calcular</button>
+
+                    <button tabindex="5" type="button" onClick="limpaAumentoMargem()" style="width: 312px;">Limpar</button>
+                    
+            </div>
+
+            <div class="container-prestacao-novo" style="height: 154px;">
+
+                <label>Contrato novo</label>
+
+                <label>
+                    <input id='margemNovaLiberadaAumentoMargem' placeholder=" " disabled>  
+                    <span>Margem liberada</span>
+                </label>
+
+                <label>
+                    <input id='valorLiberadoAumentoMargem' placeholder=" " disabled>
+                    <span>Valor liberado</span>
+                </label>
+
+            </div>
+
+        </main>
+
+        <!-- Page scripts -->	
+		<script type="text/javascript" src="../js/sidebar.js"></script>
+        <script type="text/javascript" src="../js/inss.js"></script>
+        
+    </body>
+
+</html>    
+    

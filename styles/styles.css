@@ -1,0 +1,388 @@
+/* -------------------------- General -------------------------- */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #1a1c1f;
+	height: 100vh;
+	width: 100%;
+	color: #eeecf1;
+	font-family: 'Poppins', sans-serif;
+	display: grid;
+	grid-template-columns: 230px auto;
+
+}
+
+/* Input and textarea label */
+label {
+	position:relative;
+	display:inline-block;
+	line-height: 1.2rem;
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+	
+span {
+	padding: 10px;
+	margin: 22px 5px;
+	pointer-events: none;
+	position:absolute;
+	left:0;
+	top:0;
+	transition: 0.2s;
+	transition-timing-function: ease;
+	transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+	opacity: 0.5;
+	font-size: 1rem;
+	font-weight: 100;
+}
+
+input, textarea {
+	background: #000;
+	height: 40px;
+	width: 380px;
+	margin: 20px 0 0 0;
+	padding-left: 10px;
+	border: #a8b4ae 2px solid;
+	border-radius: 5px;
+	color: #4da719;
+	font-size: 1rem;
+	font-family: 'Poppins', sans-serif;
+	outline: none;
+}
+
+input:focus + span, input:not(:placeholder-shown) + span, textarea:focus + span, textarea:not(:placeholder-shown) + span {
+	opacity: 1;
+	transform: scale(0.75) translateY(-70%) translateX(-15%);
+	color: #4da719;
+	font-weight: bold;
+	background: #000;
+}
+
+input:focus, input:not(:placeholder-shown), textarea:focus, textarea:not(:placeholder-shown) {
+	border: #4da719 2px solid; 
+}
+
+textarea {
+	resize: none;
+	width: 275px;
+	height: 192px;
+	margin-bottom: -7px;
+	padding: 10px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+	width: 4px;
+	height: 4px;
+  }
+  
+::-webkit-scrollbar-track {
+	background: #000;
+}
+  
+::-webkit-scrollbar-thumb {
+	background-color: #4da719;
+	border-radius: 10px;
+}
+
+/* Button */
+button {
+	background: #000;
+	height: 40px;
+	width: 237px;
+	margin: 20px 0 0 0;
+	border: #a8b4ae 2px solid;
+	border-radius: 5px;
+	color: #a8b4ae;
+	font-size: 1rem;
+	font-family: 'Poppins', sans-serif;
+	outline: none;
+	font-weight: bold;
+}
+
+button:hover, button:focus {
+	border: rgb(173, 91, 255) 2px solid;
+	color: rgb(173, 91, 255);
+	transition-duration: 0.3s;
+}
+
+/* -------------------------- Sidebar -------------------------- */
+
+/* Scrollbar-effect */
+#accordian::-webkit-scrollbar {
+    width: 5px;
+    height: 8px;
+}
+#accordian::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #e4e4e4;
+}
+#accordian::-webkit-scrollbar-thumb {
+    background: #4da719;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+#accordian::-webkit-scrollbar-thumb:hover {
+    background: #d5b14c;
+    transition: 0.5s;
+}
+
+/* sidebar */
+#accordian {
+	background: #000000;
+	width: 210px;
+	padding: 0 10px;
+	height: 100vh;
+	overflow-x: hidden;
+	box-shadow: 0px 0px 13px 9px rgba(28,28,28,0.87);
+}
+
+#accordian img {
+	padding: 20px 0 10px 0;
+	height: 50px;
+	margin: 0 60px;
+}
+
+i {
+	margin-right: 10px;
+}
+
+#accordian li {
+	list-style-type: none;
+	margin-top: 2px;
+}
+
+#accordian ul li a{
+	color: #eeecf1;
+	text-decoration: none;
+	font-size: 15px;
+	display: block;
+	padding: 8px 15px;
+	transition: all 0.15s;
+	position: relative;
+	border-radius: 3px;
+}
+
+#accordian>ul.show-dropdown>li.active>a,
+#accordian>ul>li>ul.show-dropdown>li.active>a,
+#accordian>ul>li>ul>li>ul.show-dropdown>li.active>a,
+#accordian>ul>li>ul>li>ul>li>ul.show-dropdown>li.active>a,
+#accordian>ul>li>ul>li>ul>li>ul>li>ul.show-dropdown>li.active>a {
+	background-color: #4da719;
+    color: #deffda;
+    box-shadow: 0px 1px 2px rgba(0, 137, 255, 0.2);
+}
+
+#accordian>ul>li>ul,
+#accordian>ul>li>ul>li>ul,
+#accordian>ul>li>ul>li>ul>li>ul,
+#accordian>ul>li>ul>li>ul>li>ul>li>ul {
+	display: none;
+}
+
+
+#accordian>ul>li.active>ul.show-dropdown,
+#accordian>ul>li>ul>li.active>ul.show-dropdown,
+#accordian>ul>li>ul>li>ul>li.active>ul.show-dropdown,
+#accordian>ul>li>ul>li>ul>li>ul>li.active>ul.show-dropdown {
+	display: block;
+}
+
+#accordian>ul>li>ul,
+#accordian>ul>li>ul>li>ul,
+#accordian>ul>li>ul>li>ul>li>ul,
+#accordian>ul>li>ul>li>ul>li>ul>li>ul {
+	padding-left: 20px;
+}
+
+#accordian a:not(:only-child):after {
+	content: "\f105";
+    position: absolute;
+    right: 20px;
+    top: 14px;
+    font-size: 15px;
+    font-family: "Font Awesome 5 Free";
+    display: inline-block;
+    padding-right: 3px;
+    vertical-align: middle;
+    font-weight: 900;
+    transition: 0.5s;
+	margin-top: -1px;
+}
+
+#accordian .active>a:not(:only-child):after {
+		transform: rotate(90deg);
+}
+
+/* -------------------------- Main -------------------------- */
+
+main {
+	margin: 30px;
+	display: flex;
+	justify-content: top;
+}
+
+/* -------------------------- Clientes -------------------------- */
+
+.container-clientes {
+	background: #000000;
+	border-radius: 10px;
+	height: calc(100vh - 100px);
+	padding: 20px;
+	width: 404px;
+	box-shadow: 0px 0px 13px 9px rgba(28,28,28,0.87);
+}
+
+.container-clientes .content table {
+	margin-top: 20px;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.container-clientes .content table tbody tr:hover {
+	color: rgb(188, 255, 167);
+	transition-duration: .2s;
+	cursor: cell;
+}
+
+.container-clientes .content table tbody .emprestado:hover {
+	color: rgb(255, 91, 91);
+	transition-duration: .2s;
+}
+
+.container-clientes .content table .emprestado {
+	color: rgb(255, 167, 167);
+}
+
+.container-clientes .content table .name-width, 
+.container-clientes .content table .name {
+	width: 280px;
+	text-align: left;
+	line-height: 28px;
+}
+
+.container-clientes .content tbody, 
+.container-clientes .content thead {
+	display: block;
+}
+
+.container-clientes .content tbody {
+	overflow-y: auto;    /* Trigger vertical scroll    */
+    overflow-x: hidden;  /* Hide the horizontal scroll */
+	height: calc(100vh - 233px);
+}
+
+/* -------------------------- Prestacao fixa / INSS  / Redução / Aumento -------------------------- */
+
+.container-prestacao-novo {
+	background: #000000;
+	border-radius: 10px;
+	height: auto;
+	padding: 20px;
+	width: 300px;
+	box-shadow: 0px 0px 13px 9px rgba(28,28,28,0.87);
+	display: inline-block;
+	margin-right: 20px;
+}
+
+.container-prestacao-novo button {
+	width: 137px;
+}
+
+.container-prestacao-novo input {
+	width: 285px;
+}
+
+/* -------------------------- Energia elétrica / Cartão -------------------------- */
+
+.container-energia table,
+.container-cartao table {
+	border-radius: 10px;
+	width: 800px;
+	border-collapse: collapse;
+	overflow: hidden;
+	box-shadow: 0px 0px 13px 9px rgba(28,28,28,0.87);
+	line-height: 1.4rem;
+}
+
+.container-energia th,
+.container-energia td {
+	padding: 10px;
+	background-color: rgba(56, 56, 56, 0.2);
+	color: #fff;
+	text-align: center;
+}
+
+.container-energia thead th {
+	background-color: #000000;
+}
+
+.container-energia tbody tr:hover {
+	background-color: rgba(255,255,255,0.3);
+}
+.container-energia td,
+.container-cartao td {
+	position: relative;
+}
+
+.container-energia td:hover::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: -9999px;
+	bottom: -9999px;
+	background-color: rgba(255,255,255,0.2);
+	z-index: -1;
+}
+
+/* -------------------------- Cartão -------------------------- */
+.containerzao-cartao {
+	background: #000;
+	border-radius: 10px;
+	height: auto;
+	padding: 20px;
+	width: 593px;
+	box-shadow: 0px 0px 13px 9px rgba(28,28,28,0.87);
+	display: inline-block;
+	margin-right: 20px;
+}
+
+.containerzao-cartao table {
+	margin-top: 20px;
+	max-width: 592px;
+}
+
+.containerzao-cartao input {
+	width: 270px;
+}
+
+.containerzao-cartao button {
+	width: 284px;
+}
+
+.container-cartao thead th {
+	background-color: #222429;
+}
+
+.container-cartao th,
+.container-cartao td {
+	padding: 10px;
+	color: #fff;
+	text-align: center;
+	line-height: 20px;
+}
+
+.container-cartao tbody tr:hover {
+	background-color: rgba(255, 255, 255, 0.37);
+}
+
+/* -------------------------- Aumento -------------------------- */
+
+.container-prestacao-novo .meioInput {
+	width: 140px;
+}

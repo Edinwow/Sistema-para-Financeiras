@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<!-- Original sidebar made by https://codepen.io/piyushpd/pen/eYWWeNL -->
+<!-- Original prestao-fixa made by https://www.codigofonte.com.br/codigos/calculando-juros-e-prestacoes-com-javascript -->
+
+<html lang="PT-BR">
+
+    <head>
+        <!-- Page info -->
+		<meta charset="UTF-8">
+		<title>GSistema | Prestação fixa</title>
+        <link rel="shotcurt icon" href="https://i.imgur.com/tS3vfqM.png">
+		<meta name="application-name" content="GSistema">
+        <meta name="author" content="Edinho">
+		<!-- Page icons -->
+		<script src="https://kit.fontawesome.com/e129a1b913.js" crossorigin="anonymous"></script>
+        <!-- Page fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+		<!-- Page styles -->
+        <link rel="stylesheet" href="../styles/styles.css">
+		<!-- Page responsiveness -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Page scripts -->
+        <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
+    </head>
+
+<!--
+
+ _._     _,-'""`-._       
+(,-.`._,'(       |\`-/|   
+    `-.-' \ )-`( , o o)  [- |) | |\| |-| () 
+          `-    \`_`"'-   
+-->        
+
+    <body>  
+        
+        <div id="accordian">
+
+            <img src="https://i.imgur.com/GLvkWLS.png" alt="Logo GS Financiamentos">
+
+            <ul class="show-dropdown">
+                <li>
+                    <a href="../index.html"><i class="far fa-address-book"></i>Clientes</a>
+                </li>
+
+                <li class="active">
+                    <a href="javascript:void(0);"><i class="far fa-chart-bar"></i>Simuladores</a>
+                    <ul class="show-dropdown">
+                        <li class="active"><a href="#">Prestação fixa</a></li>
+                        <li>
+                            <a href="javascript:void(0);">INSS</a>
+                            <ul class="show-dropdown">
+                                <li><a href="./inss-novo.html">Novo</a></li>
+                                <li><a href="./inss-cartao.html">Cartão de crédito</a></li>
+                                <li><a href="./inss-reducao.html">Redução de parcela</a></li>
+                                <li><a href="./inss-aumento.html">Aumento salarial</a></li>
+                                <li><a href="./inss-aumento-margem.html">Aumento de margem</a></li>
+                                <li><a href="./inss-desbloqueio.html">Desbloqueio</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript:void(0);">Crédito pessoal</a>
+                            <ul>
+                                <li><a href="./pessoal-cartao.html">Cartão de crédito</a></li>
+                                <li><a href="./pessoal-energia.html">Energia elétrica</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="./links-uteis.html"><i class="far fa-bookmark"></i>Links úteis</a>
+                </li>
+
+                <li>
+                    <a href="./chama-zap.html"><i class="far fa-envelope"></i>Chama zap</a>
+                </li>
+
+            </ul>
+        </div>
+
+        <main>
+            <div class="container-prestacao-novo" style="height: 342px;">
+                <form name="form1"> 
+
+                    <label for="name-filter">Simulador de prestação fixa</label>
+
+                    <label>
+                        <input name="periodo" id="meses" size="10" title="Digite o número de meses" tabindex="1" value="" type="text" placeholder=" ">  
+                        <span>Número de meses</span>
+                    </label>
+
+                    <label>
+                        <input name="juros" id="juros" size="10" tabindex="2" title="Digite taxa de juros mensal" value="" type="text" placeholder=" ">
+                        <span>Juros mensal</span>
+                    </label>
+
+                    <label>
+                        <input name="parcela" id="prestacao" size="16" tabindex="3" title="Digite valor da prestação" value="" type="text" placeholder=" "> 
+                        <span>Valor da prestação</span>
+                    </label>
+
+                    <label>
+                        <input name="montante" size="16" tabindex="4" title="Digite o valor financiado" id="montante" value="" type="text" placeholder=" ">
+                        <span>Valor financiado</span>
+                    </label>
+
+                    <button tabindex="5" type="button" onClick="Calcular()" style="margin-right: 21px;">Calcular</button>
+                    <button tabindex="6" type="button" onClick="Limpar()">Limpar</button>
+                    
+                </form> 
+            </div>
+        </main>
+
+        <!-- Page scripts -->	
+		<script type="text/javascript" src="../js/sidebar.js"></script>
+        <script type="text/javascript" src="../js/prestacao-fixa.js"></script>
+        
+    </body>
+
+</html>    
+    
