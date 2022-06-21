@@ -13,7 +13,7 @@ function limpaZap() {
 }
 
 function dadosZap() {
-    document.getElementById('mensagemZap').value = '*GS Financiamentos* \n📞(51) 3508-0628 ou 📱(51) 99441-4390 \n*Av. Baltazar de O. Garcia 931, Jd Planalto - Porto Alegre/RS*    \nCNPJ: 16.655.541-0001/98';
+    document.getElementById('mensagemZap').value = '*Financeira* \n📞(51) 1234-1234 ou 📱(51) 1234-1234 \n*Av. Pedro Navegante 900, Vila Nova - Porto Alegre/RS*    \nCNPJ: 12.345.678-0001/90';
 }
 
 function falamosZap() {
