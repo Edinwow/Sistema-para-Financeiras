@@ -1,6 +1,3 @@
-# GSistema
-
-
 ## Adicionar novos clientes
 - Copie os valores da coluna "Etiqueta" do Portifólio que não ficaram em branco;
 - Abra com o Bloco de Notas o arquivo index.HTML;
